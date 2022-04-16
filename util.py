@@ -17,7 +17,7 @@ def recognize(driver):
     files = {'imgfile': ('captcha.jpg', res.content)}
     recg_times = 0
     while recg_times < 10:
-        r = requests.post('https://cascaptcha.vercel.app/api',
+        r = requests.post('https://cascaptcha-rosy.vercel.app/api',
                           files=files, headers=headers)
         arrstr = json.loads(r.text)
         if arrstr["success"]:
